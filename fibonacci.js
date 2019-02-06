@@ -1,8 +1,21 @@
 const fib = function fibonacci(num) {
-  if (num === 0 || num === 1) {
-    return num;
+  let a = 0;
+  let b = 1;
+
+  if (num === 0) {
+    return a;
   }
-  return 0;
+  if (num === 1) {
+    return b;
+  }
+
+  for (let i = 2; i <= num; i += 1) {
+    const c = a + b;
+    a = b;
+    b = c;
+  }
+
+  return b;
 };
 
 // Since this module is being created for Node we need to use the CommonJS

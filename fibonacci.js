@@ -1,4 +1,7 @@
 const fib = function fibonacci(num) {
+  if (num === 0 || num === 1) {
+    return num;
+  }
   return 0;
 };
 
